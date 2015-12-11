@@ -5,15 +5,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 /**
- * Created by Kevin on 2015/11/16.
+ * Created by Kevin on 2015/12/6.
  */
-public class CacheDbHelper extends SQLiteOpenHelper {
-    public CacheDbHelper(Context context,int version){
-        super(context,"cache.db",null,version);
+public class WebCacheDbHelper extends SQLiteOpenHelper {
+    public WebCacheDbHelper(Context context,int version){
+        super(context,"WebCache.db",null,version);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table if not exists CacheList (id INTEGER primary key autoincrement,date INTEGER unique,json text)");
+        db.execSQL("create table if not exists Cache (id INTEGER primary key autoincrement,newsId INTEGER unique,json text)");
     }
 
     @Override

@@ -18,7 +18,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mActivity = getActivity();
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return initView(inflater,container,savedInstanceState);
     }
 
     @Override
